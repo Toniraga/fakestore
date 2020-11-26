@@ -7,37 +7,9 @@ import ProductItem from '../productItems/productItem'
 
 import './products.css'
 
-const data = [
-	{
-		id: 1,
-		title: "Come takes",
-		price: "#46",
-		category: "jewelry",
-		description: "Get you some",
-		image: "...",
-	},
-	{
-		id: 2,
-		title: "YO WE HERE",
-		price: "#50",
-		category: "handbag",
-		description: "two handbags",
-		image: "...",
-	},
-	{
-		id: 3,
-		title: "YO WE HERE",
-		price: "#50",
-		category: "handbag",
-		description: "two handbags",
-		image: "...",
-	},
-];
-
 const Products = () => {
 	const dispatch = useDispatch()
 	const cartItems = useSelector(state => state.cartReducer.cartItems)
-	console.log(cartItems, 'cartItems')
 
 	useEffect(() => {
 		fetch('https://fakestoreapi.com/products')

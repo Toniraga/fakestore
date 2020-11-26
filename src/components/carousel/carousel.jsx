@@ -21,7 +21,7 @@ const Slider = () => {
                     <div>
                         <div className='legend'> 
                             <div className='legend__top'>Fake<span>Shop</span> </div>
-                            <div className='legend__body'> With Working Cart and Paypal</div>
+                            <div className='legend__body'> With Working Cart and Stripe</div>
                         </div>
                         <img alt="" src='https://images.pexels.com/photos/919436/pexels-photo-919436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
 

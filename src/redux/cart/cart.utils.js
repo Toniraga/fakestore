@@ -30,7 +30,7 @@ export const addItem = (cartItems, newCartItem) => {
         getSelectedId(item) === getSelectedId(newCartItem)
       ) {
         item.quantity += newCartItem.quantity;
-        price = newCartItem.price * newCartItem.quantity;
+        price = item.oldprice * newCartItem.quantity;
         item.price += price;
       }
     });
@@ -41,6 +41,34 @@ export const addItem = (cartItems, newCartItem) => {
 };
 
 export const subtractItem = (cartItems, newCartItem) => {
+  const getSelectedId = (data) => {
+		if (data.id) {
+			return data.id || false;
+		} else {
+			return true;
+		}
+  };  
+  
+  const existingCartItem = cartItems.find(
+		(cartItem) =>
+			cartItem.id === newCartItem.id &&
+			getSelectedId(cartItem) === getSelectedId(newCartItem)
+  );
+  
+  if (existingCartItem) {
+		cartItems.forEach((item) => {
+			let price;
+			if (
+				item.id === newCartItem.id &&
+				getSelectedId(item) === getSelectedId(newCartItem)
+			) {
+				item.quantity = item.quantity - newCartItem.quantity;
+				price = item.oldprice * (item.quantity || 1);
+				item.price = price;
+			}
+		});
+		return cartItems;
+	}
 
 	return [...cartItems, newCartItem];
 };

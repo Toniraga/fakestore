@@ -1,6 +1,6 @@
 .product__item {
     height: 550px;
-    background-color: rgb(240, 237, 228);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     margin-left: 40px;
