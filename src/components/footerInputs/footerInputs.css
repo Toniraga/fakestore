@@ -1,0 +1,57 @@
+.body-button {
+    width: 8rem;
+    height: 2.5rem;
+    border: 1px solid #F7B39E;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #F7B39E;
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.body-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(160, 54, 54, 0.5);
+    transition: all 0.3s;
+}
+.body-button:hover::before {
+    opacity: 0;
+    transform: scale(0.5,0.5);
+}
+.body-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: scale(1.2,1.2);
+}
+.body-button:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+.body-button:hover {
+    cursor: pointer;
+}
+
+.body-button:active {
+    outline: none;
+    border: 0;
+}
+
+.footer__btn {
+    text-align: center;
+}

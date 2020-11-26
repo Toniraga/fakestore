@@ -1,0 +1,40 @@
+.footer__nav {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer__touch {
+    font-family: Roboto;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid #9e2905c0;
+    margin-bottom: 1.5rem;
+}
+
+
+.footer__address {
+    flex: 0.4;
+    margin-top: 1.4rem;
+}
+
+.footer__phone div{
+    display: flex;
+}
+
+.footer__form {
+    flex: 0.6;
+}
+
+@media screen and (max-width: 650px) {
+    .footer__contact {
+        flex-direction: column;
+    }
+}

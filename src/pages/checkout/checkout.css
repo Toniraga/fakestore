@@ -1,0 +1,116 @@
+.checkout__container {
+    margin: 130px auto;
+    width: 85%;
+    text-align: center;
+}
+
+.checkout__caption {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.checkout__caption span {
+    color: #9e2905c0;
+}
+
+.checkout__caption_body {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.checkout__body {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.checkout__footer {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.checkout__footer_caption {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.clear__cart {
+    background-color: #9e2905c0;
+    padding: 10px 0;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    width: 20%;
+}
+
+
+.checkout__footer_body div {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.checkout__total p:nth-of-type(1) {
+    color: #9e2905c0;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.checkout__total p:nth-of-type(2) {
+    color: #9e2905c0;
+    font-weight: 800;
+    font-size: 21px;
+}
+
+.checkout__btn button {
+    width: 10rem;
+    height: 2.5rem;
+    border: 1px solid #9e2905c0;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #9e2905c0;
+    text-transform: uppercase;
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.checkout__btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(53, 46, 46, 0.5);
+    transition: all 0.3s;
+}
+.checkout__btn button:hover::before {
+    opacity: 0;
+    transform: scale(0.5,0.5);
+}
+.checkout__btn button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: scale(1.2,1.2);
+}
+.checkout__btn button:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+.checkout__btn button:hover {
+    cursor: pointer;
+}
